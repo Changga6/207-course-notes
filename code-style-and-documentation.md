@@ -65,8 +65,8 @@ version, included in the repo so the IDE can point at the *exact same file*
 (see below):
 
 ```bash
-mvn validate        # runs CheckStyle on code/src/main/java
-mvn compile         # also runs validate first, so style is checked here too
+mvn validate        
+mvn compile         
 ```
 
 Because `failsOnError` is set, a style violation **fails the build** before any
@@ -150,8 +150,8 @@ It isn't bound to any build phase, so a normal build never triggers it — you r
 it on demand:
 
 ```bash
-mvn spotless:apply -pl code    # reformat every file in place
-mvn spotless:check -pl code    # just check, don't modify (fails if not formatted)
+mvn spotless:apply -pl code
+mvn spotless:check -pl code
 ```
 
 This is the source of truth — its output matches what CheckStyle expects.
