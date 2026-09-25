@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Rectangle.java (and keep these tests green).
  */
 class RectangleTest {
-
     @Test
     void areaMultipliesWidthByHeight() {
         assertEquals(12.0, new Rectangle(3.0, 4.0).area());

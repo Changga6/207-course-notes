@@ -1,29 +1,37 @@
+/**
+ A class for a Rectangle with height and width.
+ */
 public class Rectangle {
-    private double width;
-    private double height;
+  private double width;
+  private double height;
 
-    public Rectangle(double w,double h){
-        this.width=w;
-        this.height=h;
-    }
+  /**
+ Resets the height and width of the Rectangle to w and h respectively.
+   */
+  public Rectangle(double w, double h) {
+    this.width = w;
+    this.height = h;
+  }
 
-    public double area(){
-        return width*height;
-    }
+  /**
+    Returns the area the rectangle.
+   */
+  public double area() {
+    return width * height;
+  }
 
-    /**
-     * scales the rectangle
-     * @param factor
-     */
-    public void scale(double factor) {
-      width = width * factor;
-      height = height * factor;
-    }
+  /**
+   * Scales the rectangle.
+   */
+  public void scale(double factor) {
+    width = width * factor;
+    height = height * factor;
+  }
 
-    public boolean isLargerThan(Rectangle other){
-        if(area() > other.area())
-            return true;
-        else
-            return false;
-    }
+  /**
+  Returns true if the area of this Rectangle is larger than the other, false if otherwise.
+   */
+  public boolean isLargerThan(Rectangle other) {
+    return area() > other.area();
+  }
 }
