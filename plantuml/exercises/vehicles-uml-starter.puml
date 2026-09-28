@@ -42,6 +42,6 @@ class ElectricCar {
 
 Vehicle <|-- Car
 Car <|-- ElectricCar
-Chargeable <|... ElectricCar
+Chargeable <|.. ElectricCar
 
 @enduml
